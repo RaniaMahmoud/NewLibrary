@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Library.Models.Book>
+
+@{
+    ViewBag.Title = "BorrowsBook";
+    Layout = "~/Views/Shared/_LayoutLogOut.cshtml";
+}
+
+<h2>BorrowsBook</h2>
+<script>
+    function DeleteFun() {
+
+        return confirm("Do you want to Delete it!");
+    }
+</script>
+@if (ViewData.ContainsKey("Mess"))
+{
+    <div class="alert alert-info alert-dismissible fade show">
+        @ViewData["Mess"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ISBN)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ISBN)
+        </td>
+        <td>
+            <a href="~/Books/Remove/@item.ID" onclick="return DeleteFun()">Remove</a>
+
+            @*@Html.ActionLink("Remove", "Remove", new { id = item.UserID, bookid = item.ID}, onclick = "return DeleteFun()")*@
+
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.ID })*@
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
+    @Html.ActionLink("Back to Department List", "AllDepartment", "Departments") |
+</p>

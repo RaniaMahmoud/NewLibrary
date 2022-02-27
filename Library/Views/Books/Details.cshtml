@@ -1,0 +1,97 @@
+﻿@model Library.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutNew.cshtml";
+
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.LabelFor(model => model.Department.Name, "Department Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.Name)
+        </dd>
+
+        <dt>
+            @Html.LabelFor(model => model.Publisher.Name, "Publisher Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Publisher.Name)
+        </dd>
+
+        @*<dt>
+            @Html.LabelFor(model => model.User.Name, "User Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Name)
+        </dd>*@
+
+        <dt>
+            @Html.LabelFor(model => model.Title, "Book Title")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.LabelFor(model => model.ISBN, "Book ISBN")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISBN)
+        </dd>
+
+        <dt>
+            @Html.LabelFor(model => model.Yeare, "Book Yeare")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yeare)
+        </dd>
+
+        <dt>
+            @Html.LabelFor(model => model.AuthorName, "Author Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.ImagePath)" height="250" width="300" />
+        </dd>
+        <br />
+        <br />
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.File)
+        </dt>
+
+        <dd>
+
+            <a src="@Url.Content(Model.FilePath)" width="500" height="200">File</a>
+            <iframe src="https://docs.google.com/gview?url=@Model.FilePath" width="200" height="200" type='application/pdf'>
+            </iframe>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "AllBook")
+</p>

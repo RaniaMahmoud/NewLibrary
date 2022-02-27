@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Library.Models.Department>
+
+@{
+    ViewBag.Title = "AllDepartment";
+    Layout = "~/Views/Shared/_LayoutLogOut.cshtml";
+}
+
+<h2>Departments</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("All Book In Department", "AllBookInDept", new { id=item.ID }) |
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.ID })*@
+        </td>
+    </tr>
+}
+
+</table>

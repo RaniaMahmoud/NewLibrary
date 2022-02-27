@@ -1,0 +1,277 @@
+﻿@{
+    ViewBag.Title = "StartPage";
+}
+<style>
+    /*body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }*/
+
+    .br {
+        background-image: url("/Image/sylvia-yang-_ar2ENzmqb0-unsplash.jpg");
+        background-color: #cccccc;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .inn {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    .section2 {
+        text-align: center;
+    }
+</style>
+
+<!DOCTYPE html>
+<h1></h1>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Library</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/Content/main.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+            <a href="###" class="logo">Library</a>
+            <nav id="nav">
+                <a href="###">@TempData["userName"]</a>
+                <a href="~/MainView/UserView">LogOut</a>
+                @*    <a href="generic.html">Generic</a>
+                    <a href="elements.html">Elements</a>*@
+            </nav>
+        </div>
+    </header>
+    <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+    <!-- Banner -->
+    <section class="br">
+        <header class="major special">
+            <div class="inn">
+                <h1>
+                    <span>
+                        WelCome To Library Website<br />
+                    </span>
+                </h1>
+            </div>
+        </header>
+    </section>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!-- One -->
+    <section id="two">
+        <div class="section2">
+            <h2>Create Pages</h2>
+        </div>
+        <div class="inner">
+
+            @* <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu, erisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante.</p>*@
+            @*<div class="content">
+                    <ul>
+                    <li><a href="~/Books/AddNewBook" class="button special">Book</a></li>
+                    <li><a href="~/Departments/Create" class="button special">Department</a></li>
+                    <li><a href="~/Publishers/Create" class="button special">Publisher</a></li>
+                    <li><a href="~/Authors/Create" class="button special">Author</a></li>
+                    </ul>
+                </div>*@
+            <article>
+                <div class="content">
+                    <span class="icon fa-laptop"></span>
+                    <header>
+                        @*<h3>Tempus Feugiat</h3>*@
+                    </header>
+                    @*<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna lorem ullamcorper laoreet, lectus arcu.</p>*@
+                    <ul class="actions">
+                        <li><a href="~/Books/AddNewBook" class="button special">Book</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <div class="content">
+                    <span class="icon fa-laptop"></span>
+                    <header>
+                        @*<h3>Tempus Feugiat</h3>*@
+                    </header>
+                    @*<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna lorem ullamcorper laoreet, lectus arcu.</p>*@
+                    <ul class="actions">
+                        <li><a href="~/Departments/Create" class="button special">Department</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <div class="content">
+                    <span class="icon fa-laptop"></span>
+                    <header>
+                        @*<h3>Aliquam Nulla</h3>*@
+                    </header>
+                    @*<p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed.</p>*@
+                    <ul class="actions">
+                        <li><a href="~/Publishers/Create" class="button special">Publisher</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <div class="content">
+                    <span class="icon fa-laptop"></span>
+                    <header>
+                        @*<h3>Sed Magna</h3>*@
+                    </header>
+                    @*<p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula.</p>*@
+                    <ul class="actions">
+                        <li><a href="~/Authors/Create" class="button special">Author</a></li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!-- three -->
+    @*<section id="three">
+            <div class="inner">
+                <article>
+                    <div class="content">
+                        <header>
+                                <h3>Pellentesque adipis</h3>
+                            </header>
+                        <div class="image fit">
+                            <img src="images/pic01.jpg" alt="" />
+                        </div>
+                        <p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
+                    </div>
+                </article>
+                <article class="alt">
+                    <div class="content">
+                        <header>
+                            <h3>Morbi interdum mol</h3>
+                        </header>
+                        <div class="image fit">
+                            <img src="images/pic02.jpg" alt="" />
+                        </div>
+                        <p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
+                    </div>
+                </article>
+            </div>
+        </section>*@
+
+    <!-- Three -->
+    <section id="two">
+        <div class="section2">
+            <h2>
+                <span>
+                    List Pages<br />
+                </span>
+            </h2>
+        </div>
+        <div class="inner">
+            <article>
+                <div class="content">
+                    <span class="icon fa-diamond"></span>
+                    <header>
+                        @*<h3>Tempus Feugiat</h3>*@
+                    </header>
+                    @*<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna lorem ullamcorper laoreet, lectus arcu.</p>*@
+                    <ul class="actions">
+                        <li><a href="~/Books/AllBook" class="button alt">Books</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <div class="content">
+                    <span class="icon fa-laptop"></span>
+                    <header>
+                        @*<h3>Tempus Feugiat</h3>*@
+                    </header>
+                    @*<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna lorem ullamcorper laoreet, lectus arcu.</p>*@
+                    <ul class="actions">
+                        <li><a href="~/Departments/Index" class="button alt">Departments</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <div class="content">
+                    <span class="icon fa-diamond"></span>
+                    <header>
+                        @*<h3>Aliquam Nulla</h3>*@
+                    </header>
+                    @*<p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed.</p>*@
+                    <ul class="actions">
+                        <li><a href="~/Publishers/Index" class="button alt">Publishers</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <div class="content">
+                    <span class="icon fa-laptop"></span>
+                    <header>
+                        @*<h3>Sed Magna</h3>*@
+                    </header>
+                    @*<p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula.</p>*@
+                    <ul class="actions">
+                        <li><a href="~/Authors/Index" class="button alt">Authors</a></li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    @*<section id="footer">
+            <div class="inner">
+                <header>
+                    <h2>Get in Touch</h2>
+                </header>
+                <form method="post" action="#">
+                    <div class="field half first">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                    </div>
+                    <div class="field half">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" />
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="6"></textarea>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" class="alt" /></li>
+                    </ul>
+                </form>
+                <div class="copyright">
+                    &copy; Untitled Design: <a href="https://templated.co/">TEMPLATED</a>. Images <a href="https://unsplash.com/">Unsplash</a>
+                </div>
+            </div>
+        </section>*@
+
+    <!-- Scripts -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/skel.min.js"></script>
+    <script src="~/Scripts/util.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    @*<div>
+            @RenderBody()
+        </div>*@
+</body>
+
+</html>

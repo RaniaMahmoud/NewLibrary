@@ -1,0 +1,75 @@
+﻿@model Library.Models.Book
+
+@{
+    ViewBag.Title = "BookDetails";
+    Layout = "~/Views/Shared/_LayoutNew.cshtml";
+}
+
+<h2>BookDetails</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Publisher.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Publisher.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISBN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISBN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yeare)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yeare)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.ImagePath)" height="250" width="300" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Borrow", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

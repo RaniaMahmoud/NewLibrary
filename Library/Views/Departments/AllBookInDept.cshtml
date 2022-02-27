@@ -1,0 +1,45 @@
+﻿@model Library.Models.Department
+
+@{
+    ViewBag.Title = "AllBookInDept";
+    Layout = "~/Views/Shared/_LayoutLogOut.cshtml";
+}
+
+<h2>All Book In the Department</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Books)
+        </th>
+        <th>
+
+        </th>
+    </tr>
+    @foreach (var item in Model.Books)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => m.Name)
+                </td>*@
+
+            <td>
+                @Html.DisplayFor(ModelItem => item.Title)
+            </td>
+            <td>
+                @*@Html.ActionLink("Borrow this Book", "Borrow", new { id = item.ID }) |*@
+                @*@Html.ActionLink("Details", "BookDetails", new { id = item.ID }) |*@
+                <a href="~/Books/Borrow/@item.ID">Borrow this Book</a>
+                @*@Html.ActionLink("Borrow", "UserBook", "Books")*@
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p>
+    @Html.ActionLink("Back To Department List", "AllDepartment")
+</p>
